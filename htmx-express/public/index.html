@@ -1,0 +1,32 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content="{Astro.generator}" />
+    <link rel="stylesheet" href="/tailwind.css" />
+    <title>Astro HTMX AI</title>
+    <script src="/htmx.js" is:inline></script>
+    <script src="/sse.js" is:inline></script>
+  </head>
+  <body class="max-w-4xl mx-auto text-3xl pt-5">
+    <form hx-post="/prompt" hx-target="#result" class="flex gap-2 items-center">
+      <div class="whitespace-nowrap">Funny story about a</div>
+      <input
+        type="text"
+        name="prompt"
+        placeholder="Prompt"
+        value="dog"
+        class="border border-gray-400 p-2 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+      />
+      <button
+        type="submit"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full text-xl"
+      >
+        Submit
+      </button>
+    </form>
+    <div class="p-5 border-2 border-gray-400 rounded-2xl mt-5">
+      <div id="result"></div>
+    </div>
+  </body>
+</html>

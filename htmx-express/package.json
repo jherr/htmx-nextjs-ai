@@ -1,0 +1,24 @@
+{
+  "name": "htmx-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build-css": "tailwindcss build ./input.css -o ./public/tailwind.css"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "xss": "^1.0.14"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
