@@ -17,7 +17,6 @@ export const onRequest = async (context, next) => {
   }
 
   const response = await next();
-  console.log(context.url.pathname)
   let html = await response.text();
 
   // Delete the CSS and JS from the HTML response
